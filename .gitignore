@@ -1,5 +1,6 @@
 error.log
 out
+*.sqlitedb
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
