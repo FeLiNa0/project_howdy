@@ -21,12 +21,17 @@ def main():
             lang_name = lang_data.split(maxsplit=2)[0].replace('_', ' ')
 
             flag_codes = lang_data.split()[1:]
+            emoji_unneeded = any(flag in data.no_flag_needed for flag in flag_codes)
+
             if len(flag_codes) == 0:
                 flag_codes = [lang_code]
-            elif len(flag_codes) == 1 and any(flag in data.no_flag_needed for flag in flag_codes):
+            elif len(flag_codes) == 1 and emoji_unneeded:
                 flag_codes = []
 
             flag_emojis = flag.flagize(' '.join(':{}:'.format(f) for f in flag_codes))
+
+            # Something about the UTF-8 encoding of the Ukrainian flag...
+            flag_sep = '"' if any(c in 'ua' for c in lang_code) else "'"
 
             header_text = data.default_header_text
             site_title = data.default_site_title
@@ -54,7 +59,7 @@ def main():
                 print(f'failed to translate language={lang_code}', e, file=f)
 
             print(f"""  '{lang_code}':
-    languageName: '{lang_name} {flag_emojis}'
+    languageName: {flag_sep}{lang_name} {flag_emojis}{flag_sep}
     title: '{site_title} {data.site_subtitle}'
     headerText: "{header_text}\"""")
 

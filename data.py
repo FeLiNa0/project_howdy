@@ -27,6 +27,9 @@ phrases_translations = {
 
 # Maps domain name (TLD) to language name, and optionally a list of ISO 3166 country codes
 # ? or X indicates no need for flag emoji
+
+# TODO generate flags based on wikipedia data
+#       (based on number of people that speak the language)
 languages_with_roots = {
   # 'en': 'English us',
   # 'es': 'Espanol mx es',
@@ -81,7 +84,7 @@ languages_with_roots = {
 
   'russian': {
     'ua': "українська_мова_(ukrayins'ka_mova)",
-    'ru': 'русский_язык',
+    'ru': 'русский_язык_(rússky_yazýk)',
   },
 
   'austronesian languages': {
@@ -115,8 +118,8 @@ languages_with_roots = {
 languages = {l: v for ls in languages_with_roots.values() for l, v in
              ls.items()}
 
+# To separate sentences
 lang_with_separator = {
-    'za-xh': '.  ',
 }
 
 no_flag_needed = ['X', '?']
