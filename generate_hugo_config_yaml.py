@@ -46,10 +46,14 @@ def main():
                 else:
                     separator = '  '
 
-                header_text = separator.join(
-                    memo.call(translator.translate,
-                              phrase, src='en', dest=dest_lang).text
-                    for phrase in data.phrases)
+                if lang_code in data.phrases_translations:
+                    header_text = separator.join(data.phrases_translations[lang_code])
+                else:
+                    header_text = separator.join(
+                        memo.call(translator.translate,
+                                  phrase, src='en', dest=dest_lang).text
+                        for phrase in data.phrases)
+
                 site_title = memo.call(translator.translate, data.site_title,
                                                    src='en', dest=dest_lang).text
                 header_text = f"[{header_text}](/en)"

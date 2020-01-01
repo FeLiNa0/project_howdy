@@ -15,7 +15,14 @@ phrases = [
 
 phrases_translations = {
   'eo': [
-      'TODO'
+      # Google Translate
+      'Bonvenon, kara gasto!',
+      'Mi estas meksik-usona programisto kaj artisto.',
+      'Mi ne parolas aŭ skribas vian lingvon, sed mi deziras lerni.',
+      'Bonvolu viziti la anglan version aŭ la hispanan version de mia retejo.',
+      'Dankon pro legado.',
+      'Benojn al vi.',
+      'Mi deziras, ke vi trovos multajn interesajn retejojn en via interreta vojaĝo.'
   ],
   'lfn': [
       'TODO'
@@ -49,9 +56,11 @@ languages_with_roots = {
     # NO DOMAIN NAME
     'eo': 'esperanto X',
     # NO DOMAIN NAME
-    'lfn': 'Lingua_Franca_Nova_(LFN) X',
+    # TODO
+    # 'lfn': 'Lingua_Franca_Nova_(LFN) X',
     # NO DOMAIN NAME
-    'jbo': 'Lojban X',
+    # TODO
+    # 'jbo': 'Lojban X',
   },
 
   'first nations': {
