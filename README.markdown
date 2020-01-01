@@ -22,3 +22,10 @@ pipenv run ipython -i interactive.py
 
 
 # A.K.A. *project pandoglot*
+
+# Useful:
+
+- https://pypi.org/project/googletrans/
+- https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+- Wikipedia pages for languages
+- https://en.wikipedia.org/wiki/Demographics_of_the_Arab_League#Arab_League_populations
