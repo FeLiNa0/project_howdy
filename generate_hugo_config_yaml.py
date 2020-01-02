@@ -58,7 +58,7 @@ def main():
 
                 site_title = memo.call(translator.translate, data.site_title,
                                                    src='en', dest=dest_lang).text
-                header_text = f"[{header_text}](/en)"
+                header_text = f"[{header_text}](/)"
                 if lang_code in ['it', 'corsica']:
                     header_text = header_text.replace('americana', 'americano')
             except ValueError as e:
