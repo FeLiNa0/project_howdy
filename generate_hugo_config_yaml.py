@@ -20,6 +20,8 @@ def main():
         for lang_code, lang_data in progressbar.progressbar(sort_or_not(data.languages.items())):
             lang_name = lang_data.split(maxsplit=2)[0].replace('_', ' ')
 
+            lang_weight = 3 if lang_code in data.secondary_languages else 4
+
             flag_codes = lang_data.split()[1:]
             emoji_unneeded = any(flag in data.no_flag_needed for flag in flag_codes)
 
@@ -64,8 +66,14 @@ def main():
 
             print(f"""  '{lang_code}':
     languageName: {flag_sep}{lang_name} {flag_emojis}{flag_sep}
-    title: '{site_title} {data.site_subtitle}'
-    headerText: "{header_text}\"""")
+    author: '{data.long_author}'
+    title: '{site_title} ({data.short_author})'
+    headerText: "{header_text} --- {data.short_author}\"
+    weight: {lang_weight}
+    disableKinds:
+      - taxonomy
+      - taxonomyTerm
+    """)
 
 
 if __name__ == "__main__":
