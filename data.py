@@ -210,7 +210,7 @@ lang_code_to_googletrans_code = {
   'ie': 'ga',
   'hmong': 'hmn',
   'dk': 'da',
-  'latin': 'lt',
+  'latin': 'la',
   'np': 'ne',
   'இந்தி': 'ta',
   'se': 'sv',
