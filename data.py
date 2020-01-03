@@ -17,7 +17,8 @@ phrases = [
   "I do not speak or write your language, but I wish to learn.",
   "Please visit the English version or the Spanish version of my website.",
   "Thank you for reading.",
-  "Blessings to you. I wish you find many interesting websites on your online journey.",
+  "Blessings to you. I wish you find many interesting websites on your online "
+  "journey.",
 ]
 
 phrases_translations = {
@@ -29,7 +30,8 @@ phrases_translations = {
       'Bonvolu viziti la anglan version aŭ la hispanan version de mia retejo.',
       'Dankon pro legado.',
       'Benojn al vi.',
-      'Mi deziras, ke vi trovos multajn interesajn retejojn en via interreta vojaĝo.'
+      'Mi deziras, ke vi trovos multajn interesajn retejojn en via interreta '
+      'vojaĝo.'
   ],
   'lfn': [
       'TODO'
@@ -39,7 +41,8 @@ phrases_translations = {
   ],
 }
 
-# Maps domain name (TLD) to language name, and optionally a list of ISO 3166 country codes
+# Maps domain name (TLD) to language name, and optionally a list of ISO 3166
+# country codes.
 # ? or X indicates no need for flag emoji
 
 primary_languages = ["en", "es"]
@@ -71,21 +74,33 @@ languages_with_roots = {
   },
 
   'europe': {
+    'latin': 'lingua_latīna_🏛️ X',
+    'pt': 'português pt br',
     'fr': 'Français fr ca',
     'it': 'Italiano',
     # NO DOMAIN NAME
     'ch-de': 'Swiss_German ch de',
-    'de': 'German',
+    'de': 'Deutsch',
+
+    'dk': 'dansk',
 
     'corsica': 'corsu_(lingua_corsa) fr it',
     'gal': 'galego es',
     'tr': 'İstanbul_Türkçesi',
-    'se': '_or_אידיש_(yidish/idish) il',
+    'yiddish': 'ייִדיש_יידיש_or_אידיש_(yidish/idish) il',
     'cat': 'català es ad',
+    'ie': 'Gaeilge_(Irish)',
+    'pl': 'język_polski',
     # Thank you, Welsh people
     'cymru': 'Cymraeg_{} X'.format(
       b'\xf0\x9f\x8f\xb4\xf3\xa0\x81\xa7\xf3\xa0\x81\xa2\xf3\xa0\x81\xb7\xf3\xa0\x81\xac\xf3\xa0\x81\xb3\xf3\xa0\x81\xbf'.decode('utf-8')),
 
+    'ro': 'limba_română',
+
+    'scot': 'Gàidhlig_(Scots_Gaelic)_{} X'.format(
+      b'\xf0\x9f\x8f\xb4\xf3\xa0\x81\xa7\xf3\xa0\x81\xa2\xf3\xa0\x81\xb3\xf3\xa0\x81\xa3\xf3\xa0\x81\xb4\xf3\xa0\x81\xbf'.decode('utf-8')),
+
+    'lu': 'Letzeburgesch',
   },
 
   'dutch': {
@@ -95,6 +110,7 @@ languages_with_roots = {
 
   'it cold': {
     'fi': 'suomi',
+    'se': 'svenska',
   },
 
   'russian': {
@@ -102,10 +118,11 @@ languages_with_roots = {
     'ru': 'русский_язык_(rússky_yazýk)',
   },
 
-  'austronesian languages': {
+  'austronesian languages and other pacific islands': {
     'ph': 'Filipino',
     # NO DOMAIN NAME
     'ph-ceb': 'Cebuano ph',
+    'ws': 'Gagana_Sāmoa',
   },
 
   'from the levant': {
@@ -121,6 +138,9 @@ languages_with_roots = {
     'vn': 'Tiếng_Việt',
     'th': 'ภาษาไทย_(Thai,_historically_Siamese)',
     'kr': '한국어_(hanguk-eo)',
+    'jp': '日本語_(Nihongo)',
+    'hmong': 'Hmoob_(Hmong) X',
+    'mn': 'ᠮᠣᠩᠭᠣᠯ_ᠬᠡᠯᠡ_or_монгол_хэл_(mongol_khel)',
   },
 
   'african': {
@@ -128,6 +148,31 @@ languages_with_roots = {
     'za-xh': '[ˈǁʰɔsa]_(Xhosa_(have_fun)) za',
     # NO DOMAIN NAME
     'zulu': 'Zulu za',
+    'so': 'Af-Soomaali',
+
+    # later: igbo, swahili, somali, sesotho, shona, hausa, chichewa
+  },
+
+  'madagascar and shri lanka': {
+    'mg': 'Malagasy',
+    'lk': 'සිංහල_(Sinhala)',
+  },
+
+  'india': {
+    'np': 'नेपाली_(Nepali) np',
+
+    'भारत': 'मानक_हिन्दी_(Mānak_Hindī) in',
+    'hi': 'मानक_हिन्दी_(Mānak_Hindī) in',
+
+    'bd': 'বাংলা_(Bengali) bd in',
+    # Indian Dravidian language spoken predominantly by people of Karnataka in southwestern India, and by significant linguistic minorities in the states of Maharashtra, Andhra Pradesh, Tamil Nadu, Telangana, Kerala and abroad
+    'kn': 'ಕನ್ನಡ_(Kannada) in',
+    'ml': 'മലയാളം_(Malayalam) in',
+    'ભારત': 'ગુજરાતી_(Gujarati) in',
+    'ਭਾਰਤ': 'ਪੰਜਾਬੀ_or_پن٘جابی_(Punjabi) in',
+    'te': 'తెలుగు_(Telugu) in',
+    'இந்தி': 'தமிழ்_(Tamil) in lk',
+    'sd': 'سنڌي‎_सिन्(Sindhi) in',
   },
 }
 
@@ -157,11 +202,28 @@ lang_code_to_googletrans_code = {
   'cat': 'ca',
   'ph-ceb': 'ceb',
   'cymru': 'cy',
-  'se': 'yi',
+  'yiddish': 'yi',
   'ua': 'uk',
   'vn': 'vi',
   'za': 'af',
   'za-xh': 'xh',
+  'ie': 'ga',
+  'hmong': 'hmn',
+  'dk': 'da',
+  'latin': 'lt',
+  'np': 'ne',
+  'இந்தி': 'ta',
+  'se': 'sv',
+  'lk': 'si',
+  'ws': 'sm',
+  'scot': 'gd',
+  'bd': 'bn',
+  'ભારત': 'gu',
+  'भारत': 'hi',
+  'ਭਾਰਤ': 'pa',
+  'இந்தி': 'ta',
+  'lu': 'lb',
+  'jp': 'ja',
 }
 
 desired_header_text = '  '.join(phrases)
