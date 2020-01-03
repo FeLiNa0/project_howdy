@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import sys
+"""Translate and render."""
 
 import cache
 import data
@@ -9,6 +9,7 @@ from googletrans import Translator
 
 
 def main():
+    """Translate and render."""
     translator = Translator()
     memo = cache.PersistentMemoizationCache(
         cache_name='generate_hugo_config_yaml'
@@ -17,20 +18,24 @@ def main():
     sort_or_not = sorted if sort else (lambda x: x)
 
     with open('error.log', 'w') as f:
-        for lang_code, lang_data in progressbar.progressbar(sort_or_not(data.languages.items())):
+        for lang_code, lang_data in progressbar.progressbar(
+                sort_or_not(data.languages.items())
+        ):
             lang_name = lang_data.split(maxsplit=2)[0].replace('_', ' ')
 
             lang_weight = 3 if lang_code in data.secondary_languages else 4
 
             flag_codes = lang_data.split()[1:]
-            emoji_unneeded = any(flag in data.no_flag_needed for flag in flag_codes)
+            emoji_unneeded = any(
+                flag in data.no_flag_needed for flag in flag_codes)
 
             if len(flag_codes) == 0:
                 flag_codes = [lang_code]
             elif len(flag_codes) == 1 and emoji_unneeded:
                 flag_codes = []
 
-            flag_emojis = flag.flagize(' '.join(':{}:'.format(f) for f in flag_codes))
+            flag_emojis = \
+                flag.flagize(' '.join(':{}:'.format(f) for f in flag_codes))
 
             # Something about the UTF-8 encoding of the Ukrainian flag...
             flag_sep = '"' if any(c in 'ua' for c in lang_code) else "'"
@@ -49,7 +54,8 @@ def main():
                     separator = '  '
 
                 if lang_code in data.phrases_translations:
-                    header_text = separator.join(data.phrases_translations[lang_code])
+                    header_text = separator.join(
+                        data.phrases_translations[lang_code])
                 else:
                     header_text = separator.join(
                         memo.call(translator.translate,
@@ -57,10 +63,15 @@ def main():
                         for phrase in data.phrases)
 
                 site_title = memo.call(translator.translate, data.site_title,
-                                                   src='en', dest=dest_lang).text
+                                       src='en', dest=dest_lang).text
                 header_text = f"[{header_text}](/)"
                 if lang_code in ['it', 'corsica']:
                     header_text = header_text.replace('americana', 'americano')
+                if lang_code == 'zulu':
+                    header_text = header_text.replace('Unicode', '')
+                if lang_code == 'latin':
+                    header_text = header_text.replace('Mexicanus', '')\
+                        .replace('-American', 'Mexicanus-American')
             except ValueError as e:
                 print(f'failed to translate language={lang_code}', e, file=f)
 
