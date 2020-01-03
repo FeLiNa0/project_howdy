@@ -6,6 +6,23 @@
 # import data from Python...
 # or export to JS...
 
+# a few more popular languages:
+# TODO marathi (india)
+# TODO wu chinese
+# TODO turkish
+# TODO urdu
+# TODO javanese, indonesian
+# TODO persian
+# TODO bhojpuri (india)
+# TODO min najn chinese, hakka chinese, hjn chinese, xiang chinese, gan chinese
+# TODO yoruba (niger)
+# TODO odia (india)
+# TODO burmese
+# TODO maithili (india)
+# TODO burmese
+# TODO uzbek
+# TODO pashto
+
 long_author = "Hugo Omar Rivera Calzadillas"
 short_author = "Hugo O. Rivera"
 site_title = "Hugo says hello"
@@ -150,7 +167,7 @@ languages_with_roots = {
     'zulu': 'Zulu za',
     'so': 'Af-Soomaali',
 
-    # later: igbo, swahili, somali, sesotho, shona, hausa, chichewa
+    # TODO igbo, swahili, somali, sesotho, shona, hausa, chichewa
   },
 
   'madagascar and shri lanka': {
