@@ -11,7 +11,7 @@ translator = Translator()
 memo = cache.PersistentMemoizationCache(
     cache_name='generate_hugo_config_yaml'
 )
-sort = False
+sort = True
 sort_or_not = sorted if sort else (lambda x: x)
 
 secondary_weight = 5
@@ -84,7 +84,7 @@ def main():
                         memo.call(translator.translate,
                                   phrase, src='en', dest=dest_lang).text
                         for phrase in data.phrases)
-                    header_text = f"[{header_text}](/)"
+                    header_text = f"[{header_text}](/) " + data.default_header_text
 
                 if code in ['it', 'corsica']:
                     header_text = header_text.replace('americana', 'americano')
