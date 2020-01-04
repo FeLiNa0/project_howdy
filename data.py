@@ -121,10 +121,10 @@ phrases_translations = {
   'ie': [
     "Dia dhuit, a chuairteoir. Céad míle fáilte!",
     # The rest is Google translate
-    "Is é mo ainm Hugo Omar Rivera Calzadillas.",
+    "Tá mé Hugo Omar Rivera Calzadillas.",
     "I am a Mheicsiceo-Mheiriceánach Ríomhchláraitheoir agus ealaíontóir.",
     "Ní féidir liom labhairt nó a scríobh do theanga, ach ba mhaith liom a fhoghlaim.",
-    "Tabhair cuairt ar an leagan Béarla nó an leagan na Spáinne de mo shuíomh gréasáin.",
+    "Tabhair cuairt ar an leagan Béarla nó an leagan na Spainnis de mo shuíomh gréasáin.",
     "Go raibh maith agat as léamh.",
     "Beannachtaí a thabhairt duit.",
     "Ba mhaith liom tú teacht ar láithreáin ghréasáin suimiúil go leor ar do thurasar líne.",

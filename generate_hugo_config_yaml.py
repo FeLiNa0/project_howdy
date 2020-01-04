@@ -11,9 +11,7 @@ from iso3166 import countries
 from progressbar import ProgressBar
 
 translator = Translator()
-memo = PersistentMemoizationCache(
-    cache_name='generate_hugo_config_yaml'
-)
+memo = PersistentMemoizationCache(cache_name='generate_hugo_config_yaml')
 sort = True
 sort_or_not = sorted if sort else (lambda x: x)
 
@@ -51,12 +49,17 @@ def main():
                              subregions=True)
 
             custom_flags = "mx us".split()
+            named = [
+                (code, countries.get(''.join(code.split('-')[:1])).name)
+                for code in flag_codes + custom_flags
+            ]
             linked_flag_emojis = \
             ' '.join([
-                "[{}](https://duckduckgo.com/?q={})".format(
-                    flagize(f':{f}:', subregions=True),
-                    quote(countries.get(''.join(f.split('-')[:1])).name)
-                ) for f in flag_codes + custom_flags
+                "[{}](https://duckduckgo.com/?q={} '{}')".format(
+                    flagize(f':{code}:', subregions=True),
+                    quote(name),
+                    name.replace("'", "\\'")
+                ) for code, name in named
             ])
 
             # Something about the UTF-8 encoding of the Ukrainian flag...
