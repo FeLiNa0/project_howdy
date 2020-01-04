@@ -99,6 +99,15 @@ phrases_translations = {
       "xu do se bangu la .inglic.",
       ".a'o pluka litru le braxamsi.",
   ],
+  'kr': [
+    "반갑습니다, 친애하는 여러분.",
+    "제 이름은 Hugo Omar Rivera Calzadillas입니다.",
+    "저는 멕시코계 미국인이면서, 프로그래머겸 아티스트 입니다.",
+    "저는 여러분의 언어를 말하거나 쓸 수는 없지만 배우고 싶습니다.",
+    "저의 영어 또는 스페인어 버전의 웹사이트를 방문해 주세요.",
+    "읽어주셔서 감사합니다.",
+    "당신을 축복하고 당신이 온라인 여행을 하면서 많은 흥미로운 웹사이트 찾기를 희망합니다.",
+  ]
 }
 
 for lang, t in site_title_translations.items():
@@ -120,6 +129,48 @@ languages_with_roots = {
   #       'hk gu as ai bm vg ky cw fk mp tc vi  ',
   # 'es': 'Espanol mx pr es sv gt cl ar bo pa py ve gq co pe do',
 
+  'europe': {
+    'latin': 'lingua_latīna_🏛️ X',
+    'pt': 'português pt br',
+    'fr': 'Français fr ca',
+    'it': 'Italiano',
+    # NO DOMAIN NAME
+    'ch-de': 'Swiss_German ch de',
+    'de': 'Deutsch',
+
+    'dk': 'dansk',
+
+    'corsica': 'corsu_(lingua_corsa) fr it',
+    'gal': 'galego es',
+    'tr': 'İstanbul_Türkçesi',
+    'yiddish': 'ייִדיש_יידיש_or_אידיש_(yidish/idish) il',
+    'cat': 'català es ad',
+    'ie': 'Gaeilge_(Irish)',
+    'pl': 'język_polski',
+    # Thank you, Welsh people
+    'cymru': 'Cymraeg gb-wls',
+    'ro': 'limba_română',
+
+    'scot': 'Gàidhlig_(Scots_Gaelic) gb-sct',
+
+    'lu': 'Letzeburgesch',
+  },
+
+  'dutch': {
+    'nl': 'Nederlands be nl',
+    'za': 'Afrikaans za',
+  },
+
+  'it cold': {
+    'fi': 'suomi',
+    'se': 'svenska',
+  },
+
+  'russian': {
+    'ua': "українська_мова_(ukrayins'ka_mova)",
+    'ru': 'русский_язык_(rússky_yazýk)',
+  },
+
   'constructured languages': {
     # NO DOMAIN NAME
     'eo': 'esperanto X',
@@ -134,6 +185,67 @@ languages_with_roots = {
 
     # creole
     'ht': 'kreyòl_ayisyen',
+  },
+
+  'asian': {
+    'zh-yue': '粤语_(yuèyǔ) cn',
+    'cn': '官话_(Guānhuà)',
+    'vn': 'Tiếng_Việt',
+    'th': 'ภาษาไทย_(Thai,_historically_Siamese)',
+    'kr': '한국어_(hanguk-eo)',
+    'jp': '日本語_(Nihongo)',
+    'hmong': 'Hmoob_(Hmong) X',
+    'mn': 'ᠮᠣᠩᠭᠣᠯ_ᠬᠡᠯᠡ_or_монгол_хэл_(mongol_khel)',
+  },
+
+  'from the levant': {
+    'il': 'עִבְרִית_(Ivrit)',
+    'et': 'አማርኛ_(Amarəñña) et',
+    'gr': 'ελληνικά_(elliniká)',
+    'شبكة': 'اَلْعَرَبِيَّةُ_(al-ʿarabiyyah) ' + \
+            'eg dz sd iq sa ye sy so tn jo ae ly lb ps om',
+  },
+
+  'african': {
+    # NO DOMAIN NAME
+    'za-xh': '[ˈǁʰɔsa]_(Xhosa_(have_fun)) za',
+    # NO DOMAIN NAME
+    'zulu': 'Zulu za',
+    'so': 'Af-Soomaali',
+
+    # TODO igbo, swahili, somali, sesotho, shona, hausa, chichewa
+  },
+
+  'austronesian languages and other pacific islands': {
+    'ph': 'Filipino',
+    # NO DOMAIN NAME
+    'ph-ceb': 'Cebuano ph',
+    'ws': 'Gagana_Sāmoa',
+  },
+
+  'madagascar and shri lanka': {
+    'mg': 'Malagasy',
+    'lk': 'සිංහල_(Sinhala)',
+  },
+
+  'india': {
+    'np': 'नेपाली_(Nepali) np',
+
+    'भारत': 'मानक_हिन्दी_(Mānak_Hindī) in',
+    'hi': 'मानक_हिन्दी_(Mānak_Hindī) in',
+
+    'bd': 'বাংলা_(Bengali) bd in',
+    # Indian Dravidian language spoken predominantly by people of Karnataka in
+    # southwestern India, and by significant linguistic minorities in the
+    # states of Maharashtra, Andhra Pradesh, Tamil Nadu, Telangana, Kerala
+    # and abroad
+    'kn': 'ಕನ್ನಡ_(Kannada) in',
+    'ml': 'മലയാളം_(Malayalam) in',
+    'ભારત': 'ગુજરાતી_(Gujarati) in',
+    'ਭਾਰਤ': 'ਪੰਜਾਬੀ_or_پن٘جابی_(Punjabi) in',
+    'te': 'తెలుగు_(Telugu) in',
+    'இந்தி': 'தமிழ்_(Tamil) in lk',
+    'sd': 'سنڌي‎_सिन्(Sindhi) in',
   },
 
   'first nations': {
@@ -221,108 +333,6 @@ languages_with_roots = {
     'kic': 'Fox_or_Mesquakie_Meskwaki mx us',
   },
 
-  'europe': {
-    'latin': 'lingua_latīna_🏛️ X',
-    'pt': 'português pt br',
-    'fr': 'Français fr ca',
-    'it': 'Italiano',
-    # NO DOMAIN NAME
-    'ch-de': 'Swiss_German ch de',
-    'de': 'Deutsch',
-
-    'dk': 'dansk',
-
-    'corsica': 'corsu_(lingua_corsa) fr it',
-    'gal': 'galego es',
-    'tr': 'İstanbul_Türkçesi',
-    'yiddish': 'ייִדיש_יידיש_or_אידיש_(yidish/idish) il',
-    'cat': 'català es ad',
-    'ie': 'Gaeilge_(Irish)',
-    'pl': 'język_polski',
-    # Thank you, Welsh people
-    'cymru': 'Cymraeg gb-wls',
-    'ro': 'limba_română',
-
-    'scot': 'Gàidhlig_(Scots_Gaelic) gb-sct',
-
-    'lu': 'Letzeburgesch',
-  },
-
-  'dutch': {
-    'nl': 'Nederlands be nl',
-    'za': 'Afrikaans za',
-  },
-
-  'it cold': {
-    'fi': 'suomi',
-    'se': 'svenska',
-  },
-
-  'russian': {
-    'ua': "українська_мова_(ukrayins'ka_mova)",
-    'ru': 'русский_язык_(rússky_yazýk)',
-  },
-
-  'austronesian languages and other pacific islands': {
-    'ph': 'Filipino',
-    # NO DOMAIN NAME
-    'ph-ceb': 'Cebuano ph',
-    'ws': 'Gagana_Sāmoa',
-  },
-
-  'from the levant': {
-    'il': 'עִבְרִית_(Ivrit)',
-    'et': 'አማርኛ_(Amarəñña) et',
-    'gr': 'ελληνικά_(elliniká)',
-    'شبكة': 'اَلْعَرَبِيَّةُ_(al-ʿarabiyyah) ' + \
-            'eg dz sd iq sa ye sy so tn jo ae ly lb ps om',
-  },
-
-  'asian': {
-    'zh-yue': '粤语_(yuèyǔ) cn',
-    'cn': '官话_(Guānhuà)',
-    'vn': 'Tiếng_Việt',
-    'th': 'ภาษาไทย_(Thai,_historically_Siamese)',
-    'kr': '한국어_(hanguk-eo)',
-    'jp': '日本語_(Nihongo)',
-    'hmong': 'Hmoob_(Hmong) X',
-    'mn': 'ᠮᠣᠩᠭᠣᠯ_ᠬᠡᠯᠡ_or_монгол_хэл_(mongol_khel)',
-  },
-
-  'african': {
-    # NO DOMAIN NAME
-    'za-xh': '[ˈǁʰɔsa]_(Xhosa_(have_fun)) za',
-    # NO DOMAIN NAME
-    'zulu': 'Zulu za',
-    'so': 'Af-Soomaali',
-
-    # TODO igbo, swahili, somali, sesotho, shona, hausa, chichewa
-  },
-
-  'madagascar and shri lanka': {
-    'mg': 'Malagasy',
-    'lk': 'සිංහල_(Sinhala)',
-  },
-
-  'india': {
-    'np': 'नेपाली_(Nepali) np',
-
-    'भारत': 'मानक_हिन्दी_(Mānak_Hindī) in',
-    'hi': 'मानक_हिन्दी_(Mānak_Hindī) in',
-
-    'bd': 'বাংলা_(Bengali) bd in',
-    # Indian Dravidian language spoken predominantly by people of Karnataka in
-    # southwestern India, and by significant linguistic minorities in the
-    # states of Maharashtra, Andhra Pradesh, Tamil Nadu, Telangana, Kerala
-    # and abroad
-    'kn': 'ಕನ್ನಡ_(Kannada) in',
-    'ml': 'മലയാളം_(Malayalam) in',
-    'ભારત': 'ગુજરાતી_(Gujarati) in',
-    'ਭਾਰਤ': 'ਪੰਜਾਬੀ_or_پن٘جابی_(Punjabi) in',
-    'te': 'తెలుగు_(Telugu) in',
-    'இந்தி': 'தமிழ்_(Tamil) in lk',
-    'sd': 'سنڌي‎_सिन्(Sindhi) in',
-  },
 }
 
 languages = {l: v for ls in languages_with_roots.values() for l, v in
