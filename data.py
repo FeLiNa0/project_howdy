@@ -383,6 +383,7 @@ lang_code_to_googletrans_code = {
   'இந்தி': 'ta',
   'lu': 'lb',
   'jp': 'ja',
+  'ir': 'fa',
 }
 
 desired_header_text = '  '.join(phrases)
