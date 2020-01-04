@@ -55,8 +55,9 @@ def main():
                     separator = '  '
 
                 if lang_code in data.phrases_translations:
-                    header_text = separator.join(
-                        data.phrases_translations[lang_code])
+                    header_text = '{}\n\n{}'.format(
+                        separator.join(data.phrases_translations[lang_code]),
+                        data.default_header_text)
                 else:
                     header_text = separator.join(
                         memo.call(translator.translate,
@@ -83,9 +84,9 @@ def main():
 
             print(f"""  '{lang_code}':
     languageName: {flag_sep}{lang_name} {flag_emojis}{flag_sep}
-    author: '{data.long_author}'
-    title: '{site_title} ({data.short_author})'
-    headerText: "{header_text} --- {data.short_author}\"
+    author: "{data.long_author}"
+    title: "{site_title} ({data.short_author})"
+    headerText: "{header_text} --- {data.short_author}"
     weight: {lang_weight}
     disableKinds:
       - taxonomy
