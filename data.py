@@ -204,6 +204,7 @@ languages_with_roots = {
     'gr': 'ελληνικά_(elliniká)',
     'شبكة': 'اَلْعَرَبِيَّةُ_(al-ʿarabiyyah) ' + \
             'eg dz sd iq sa ye sy so tn jo ae ly lb ps om',
+    'ir': 'فارسی_(fārsi)',
   },
 
   'african': {
