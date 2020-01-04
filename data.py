@@ -215,7 +215,13 @@ languages_with_roots = OrderedDict([
     'zulu': 'Zulu za',
     'so': 'Af-Soomaali',
 
-    # TODO igbo, swahili, somali, sesotho, shona, hausa, chichewa
+    'ng': 'Ásụ̀sụ̀_Ìgbò ng gq',
+    'ke': 'Swahili ke tz cd rw ug',
+    'st': 'Sesotho ls za zw',
+    'sn': 'chiShona_(Shona) zw',
+    'ha': 'Harshen_(Hausa) ne ng gh',
+    'ny': 'Chichewa_or_Chinyanja_or_Nyanja mw zw',
+
   }),
 
   ('austronesian languages and other pacific islands', {
@@ -384,6 +390,8 @@ lang_code_to_googletrans_code = {
   'lu': 'lb',
   'jp': 'ja',
   'ir': 'fa',
+  'ke': 'sw',
+  'ng': 'ig',
 }
 
 desired_header_text = '  '.join(phrases)
