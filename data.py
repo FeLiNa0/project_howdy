@@ -26,6 +26,16 @@ short_author = "Hugo O. Rivera"
 site_title = f"Hello! {short_author} is my name"
 default_site_title = "Hugo Omar Rivera Calzadillas"
 
+phrases = [
+  "Hello, dear guest! My name is Hugo Omar Rivera Calzadillas."
+  "I am a Mexican-American programmer and artist.",
+  "I do not speak or write your language, but I wish to learn.",
+  "Please visit the English version or the Spanish version of my website.",
+  "Thank you for reading.",
+  "Blessings to you. I wish you find many interesting websites on your online "
+  "journey.",
+]
+
 # https://omniglot.com/language/phrases/index.htm
 site_title_translations = {
     # http://www.questconnect.org/tara_dictionary.htm
@@ -35,7 +45,6 @@ site_title_translations = {
     # https://www.omniglot.com/language/phrases/navajo.php
     # http://www.suduva.com/dineh_conversation.htm
     'nv': f"Yá'át'ééh! Shí éí {short_author} yinishyé.",
-    'haw': f"Aloha! ʻO {short_author} koʻu inoa.",
     'lkt': f"Hau! {short_author} emáčiyapi.",
     'jbo': f"coi! mi'e {short_author}.",
     'lfn': f"Ало! Ме ном ес {short_author}.",
@@ -70,15 +79,6 @@ site_title_translations = {
 
 site_title_translations['kjq'] = site_title_translations['kee']
 
-phrases = [
-  "Hello, dear guest! My name is Hugo Omar Rivera Calzadillas."
-  "I am a Mexican-American programmer and artist.",
-  "I do not speak or write your language, but I wish to learn.",
-  "Please visit the English version or the Spanish version of my website.",
-  "Thank you for reading.",
-  "Blessings to you. I wish you find many interesting websites on your online "
-  "journey.",
-]
 
 phrases_translations = {
   'eo': [
@@ -105,6 +105,7 @@ phrases_translations = {
       "xu do se bangu la .inglic.",
       ".a'o pluka litru le braxamsi.",
   ],
+    # Thanks to So Young from Southern South Korea
   'kr': [
     "반갑습니다, 친애하는 여러분.",
     "제 이름은 Hugo Omar Rivera Calzadillas입니다.",
@@ -113,6 +114,18 @@ phrases_translations = {
     "저의 영어 또는 스페인어 버전의 웹사이트를 방문해 주세요.",
     "읽어주셔서 감사합니다.",
     "당신을 축복하고 당신이 온라인 여행을 하면서 많은 흥미로운 웹사이트 찾기를 희망합니다.",
+  ],
+    # Thanks to Hannah from Ireland
+  'ie': [
+    "Dia dhuit, a chuairteoir. Céad míle fáilte!",
+    # The rest is Google translate
+    "Is é mo ainm Hugo Omar Rivera Calzadillas.",
+    "I am a Mheicsiceo-Mheiriceánach Ríomhchláraitheoir agus ealaíontóir.",
+    "Ní féidir liom labhairt nó a scríobh do theanga, ach ba mhaith liom a fhoghlaim.",
+    "Tabhair cuairt ar an leagan Béarla nó an leagan na Spáinne de mo shuíomh gréasáin.",
+    "Go raibh maith agat as léamh.",
+    "Beannachtaí a thabhairt duit.",
+    "Ba mhaith liom tú teacht ar láithreáin ghréasáin suimiúil go leor ar do thurasar líne.",
   ]
 }
 
@@ -287,7 +300,7 @@ languages_with_roots = OrderedDict([
   }),
 
   ('first nations', {
-    'nhn': 'Nahuatl mx',
+    'nhn': 'Nāhuatlahtōlli_(Náhuatl) mx',
     'tar': "Rarámuri_ra'ícha_or_Ralámuli_ra'ícha_(Tarahumara) mx",
 
     'nv': 'Diné_bizaad_or_Naabeehó_bizaad_(Navajo) us',
