@@ -8,21 +8,18 @@ from collections import OrderedDict
 # or export to JS...
 
 # a few more popular languages:
-# TODO marathi (india)
-# TODO wu chinese
-# TODO turkish
-# TODO urdu
-# TODO javanese, indonesian
-# TODO persian
+# DONE marathi (india)
+# DONE urdu
+# DONE javanese, indonesian
+# DONE persian
 # TODO bhojpuri (india)
-# TODO min najn chinese, hakka chinese, hjn chinese, xiang chinese, gan chinese
+# TODO wu chinese, min najn chinese, hakka chinese, hjn chinese, xiang chinese, gan chinese
 # TODO yoruba (niger)
 # TODO odia (india)
-# TODO burmese
+# DONE burmese
 # TODO maithili (india)
-# TODO burmese
-# TODO uzbek
-# TODO pashto
+# DONE uzbek
+# DONE pashto
 
 long_author = "Hugo Omar Rivera Calzadillas"
 short_author = "Hugo O. Rivera"
@@ -61,6 +58,14 @@ site_title_translations = {
     # http://talksauk.com/#/phrases/greetings_and_feelings
     # http://talksauk.com/#/dictionary/everyday_words
     'kic': f"Ho^",
+    # https://wikitravel.org/en/Marathi_phrasebook
+    'marathi': f"नमस्कार! माझं नाव  {short_author} आहे. तुम्हाला भेटून आनंद झाला. ",
+    # https://www.omniglot.com/language/phrases/maithili.php
+    'maithili': f"Swagatam! Hamar naam {short_author} chhi. Dhanyabad.",
+    # https://www.omniglot.com/language/phrases/oriya.php
+    'ଓଡିଶା': f"ସ୍ବାଗତ!  	ମୋର ନାମ {short_author}. ସୁଭ ଜାତ୍ରା .",
+    # https://www.omniglot.com/language/phrases/bhojpuri.php
+    'fj': f"आईं ना! हमार नाव्  {short_author} ह. सफ़र बढ़िया रहे.",
 }
 
 site_title_translations['kjq'] = site_title_translations['kee']
@@ -143,18 +148,16 @@ languages_with_roots = OrderedDict([
 
     'corsica': 'corsu_(lingua_corsa) fr it',
     'gal': 'galego es',
-    'tr': 'İstanbul_Türkçesi',
     'yiddish': 'ייִדיש_יידיש_or_אידיש_(yidish/idish) il',
     'cat': 'català es ad',
     'ie': 'Gaeilge_(Irish)',
-    'pl': 'język_polski',
     # Thank you, Welsh people
     'cymru': 'Cymraeg gb-wls',
     'ro': 'limba_română',
 
     'scot': 'Gàidhlig_(Scots_Gaelic) gb-sct',
-
     'lu': 'Letzeburgesch',
+
   }),
 
   ('dutch', {
@@ -165,11 +168,23 @@ languages_with_roots = OrderedDict([
   ('it cold', {
     'fi': 'suomi',
     'se': 'svenska',
+    'is': 'íslenska_(Icelandic)',
+    'no': 'norsk_(Norwegian)',
   }),
 
   ('russian', {
     'ua': "українська_мова_(ukrayins'ka_mova)",
     'ru': 'русский_язык_(rússky_yazýk)',
+    'uz': 'ўзбекча_or_اوزبیکچه‎_(Uzbek)',
+    'kg': 'кыргызча_or_قىرعىزچا‎_(Kyrgyz) kg',
+
+  }),
+
+  ('eastern europe, i think', {
+    'pl': 'język_polski',
+    'tr': 'İstanbul_Türkçesi',
+    'rs': 'srpski_or_српски_(Serbian) sr',
+    'ba': 'bosanski_or_босански_(Bosnian)',
   }),
 
   ('constructured languages', {
@@ -206,6 +221,7 @@ languages_with_roots = OrderedDict([
     'شبكة': 'اَلْعَرَبِيَّةُ_(al-ʿarabiyyah) ' + \
             'eg dz sd iq sa ye sy so tn jo ae ly lb ps om',
     'ir': 'فارسی_(fārsi) ir af tj',
+    'ps': 'پښتو_(Pashto) af',
   }),
 
   ('african', {
@@ -229,6 +245,11 @@ languages_with_roots = OrderedDict([
     # NO DOMAIN NAME
     'ph-ceb': 'Cebuano ph',
     'ws': 'Gagana_Sāmoa',
+    'id': 'bahasa_Indonesia',
+    'jv': 'ꦧꦱꦗꦮ_(Javanese) id',
+    # https://en.wikipedia.org/wiki/Bhojpuri_language
+    # NO DOMAIN NAME
+    'fj': 'भोजपुरी_(Bhojpuri) fj in np mu',
   }),
 
   ('madagascar and shri lanka', {
@@ -242,6 +263,10 @@ languages_with_roots = OrderedDict([
     'भारत': 'मानक_हिन्दी_(Mānak_Hindī) in',
     'hi': 'मानक_हिन्दी_(Mānak_Hindī) in',
 
+    'maithili': 'Maithilī in np',
+
+    'ଓଡିଶା': 'ଓଡ଼ିଆ_(Odia) in',
+
     'bd': 'বাংলা_(Bengali) bd in',
     # Indian Dravidian language spoken predominantly by people of Karnataka in
     # southwestern India, and by significant linguistic minorities in the
@@ -254,6 +279,11 @@ languages_with_roots = OrderedDict([
     'te': 'తెలుగు_(Telugu) in',
     'இந்தி': 'தமிழ்_(Tamil) in lk',
     'sd': 'سنڌي‎_सिन्(Sindhi) in',
+    # https://en.wikipedia.org/wiki/Marathi_language
+    'marathi': 'मराठी_(Marāṭhī) in',
+    'pk': 'اُردُو‎_(Urdu)',
+    'my': 'မြန်မာဘာသာ_(Burmese) mm',
+
   }),
 
   ('first nations', {
@@ -392,6 +422,11 @@ lang_code_to_googletrans_code = {
   'ir': 'fa',
   'ke': 'sw',
   'ng': 'ig',
+  'pk': 'ur',
+  'jv': 'jw',
+  'rs': 'sr',
+  'kg': 'ky',
+  'ba': 'bs',
 }
 
 desired_header_text = '  '.join(phrases)
