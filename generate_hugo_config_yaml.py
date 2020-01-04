@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 """Translate and render."""
 
+import cache
+import data
 import flag
 import progressbar
 from googletrans import Translator
-
-import cache
-import data
 
 
 def main():
@@ -36,26 +35,39 @@ def main():
                 flag_codes = []
 
             flag_emojis = \
-                flag.flagize(' '.join(':{}:'.format(f) for f in flag_codes))
+                flag.flagize(' '.join(':{}:'.format(f) for f in flag_codes),
+                             subregions=True)
 
             # Something about the UTF-8 encoding of the Ukrainian flag...
             flag_sep = '"' if any(c in 'ua' for c in lang_code) else "'"
 
             header_text = data.default_header_text
             site_title = data.default_site_title
+
+            if lang_code in data.lang_code_to_googletrans_code:
+                dest_lang = data.lang_code_to_googletrans_code[lang_code]
+            else:
+                dest_lang = lang_code
+
+            if lang_code in data.lang_with_separator:
+                separator = data.lang_with_separator[lang_code]
+            else:
+                separator = '  '
+
             try:
-                if lang_code in data.lang_code_to_googletrans_code:
-                    dest_lang = data.lang_code_to_googletrans_code[lang_code]
+                if lang_code in data.site_title_translations:
+                    site_title = data.site_title_translations[lang_code]
                 else:
-                    dest_lang = lang_code
+                    site_title = memo.call(translator.translate,
+                                           data.site_title,
+                                           src='en', dest=dest_lang).text
+            except ValueError as e:
+                print(f'failed to translate title for {lang_code}', e, file=f)
+                lang_weight = 3 if lang_code in data.secondary_languages else 9
 
-                if lang_code in data.lang_with_separator:
-                    separator = data.lang_with_separator[lang_code]
-                else:
-                    separator = '  '
-
+            try:
                 if lang_code in data.phrases_translations:
-                    header_text = '{}\n\n{}'.format(
+                    header_text = '{}   {}'.format(
                         separator.join(data.phrases_translations[lang_code]),
                         data.default_header_text)
                 else:
@@ -76,22 +88,11 @@ def main():
                 print(f'failed to translate language={lang_code}', e, file=f)
                 lang_weight = 3 if lang_code in data.secondary_languages else 9
 
-            try:
-                if lang_code in data.site_title_translations:
-                    site_title = data.site_title_translations[lang_code]
-                else:
-                    site_title = memo.call(translator.translate,
-                                           data.site_title,
-                                           src='en', dest=dest_lang).text
-            except ValueError as e:
-                print(f'failed to translate title for {lang_code}', e, file=f)
-                lang_weight = 3 if lang_code in data.secondary_languages else 9
-
             print(f"""  '{lang_code}':
     languageName: {flag_sep}{lang_name} {flag_emojis}{flag_sep}
     author: "{data.long_author}"
     title: "{site_title} ({data.short_author})"
-    headerText: "{header_text} --- {data.short_author}"
+    headerText: "{header_text} --- {data.short_author} {flag_emojis} 🇲🇽 🇺🇸"
     weight: {lang_weight}
     disableKinds:
       - taxonomy

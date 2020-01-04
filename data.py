@@ -25,21 +25,47 @@
 
 long_author = "Hugo Omar Rivera Calzadillas"
 short_author = "Hugo O. Rivera"
-site_title = "Hello! Hugo Rivera Calzadillas is my name"
+site_title = f"Hello! {short_author} is my name"
 default_site_title = "Hugo Omar Rivera Calzadillas"
 
 # https://omniglot.com/language/phrases/index.htm
 site_title_translations = {
-    'nhn': 'Nitlze! Nehua notōcā Hugo Rivera',
-    'nv': "Yá'át'ééh! Shí éí Hugo Rivera yinishyé",
-    'haw': "Aloha! ʻO Hugo Rivera koʻu inoa",
-    'lkt': "Hau! Hugo Rivera emáčiyapi",
-    'jbo': "coi! mi'e Hugo Rivera",
-    'lfn': "Ало! Ме ном ес Hugo Rivera"
+    # http://www.questconnect.org/tara_dictionary.htm
+    # https://www.academia.edu/8173744/Tarahumara_Phrases
+    'tar': f"Kuira-bá! Nijé koriwe {short_author}, chabochi. Wimena Nijé.",
+    'nhn': f'Nitlze! Nehua notōcā {short_author}.',
+    # https://www.omniglot.com/language/phrases/navajo.php
+    # http://www.suduva.com/dineh_conversation.htm
+    'nv': f"Yá'át'ééh! Shí éí {short_author} yinishyé.",
+    'haw': f"Aloha! ʻO {short_author} koʻu inoa.",
+    'lkt': f"Hau! {short_author} emáčiyapi.",
+    'jbo': f"coi! mi'e {short_author}.",
+    'lfn': f"Ало! Ме ном ес {short_author}.",
+    # https://www.omniglot.com/language/phrases/cherokee.php
+    'chr': f"ᎤᎵᎮᎵᏍᏗ! {short_author} ᏓᏆᏙ.",
+    # https://www.facebook.com/umndakhotaiapi/posts/10153132735022077/
+    'dak': f"Háu! {short_author} emákiyapi do.",
+    # http://akiuk.lksd.org/resources/yup_ik_phrases
+    'ypk': f"Waqaa! Quyana tailuci!",
+    # http://www.suduva.com/acoma_conversation.htm
+    'kee': f"Guw'aadzi!",
+    # https://www.omniglot.com/language/phrases/choctaw.htm
+    'cho': f"Halito! Sa hohchifo ut {short_author}.",
+    # http://www.suduva.com/zuni_conversation.htm
+    'zun': f"Keshhi, hom a:kuwaye! Ho' {short_author} leshhina.",
+    # https://www.omniglot.com/language/phrases/yucatec-maya.php
+    'yua': f"Ba'ax ka wa'alik? Kíimak 'oolal. In k'aaba'e {short_author}. Xíiktech uutsil",
+    # https://www.omniglot.com/writing/otomi.htm
+    'oto': f"Zenjua Ki!",
+    # http://talksauk.com/#/phrases/greetings_and_feelings
+    # http://talksauk.com/#/dictionary/everyday_words
+    'kic': f"Ho^",
 }
 
+site_title_translations['kjq'] = site_title_translations['kee']
+
 phrases = [
-  "Welcome, dear guest!",
+  "Hello, dear guest! My name is Hugo Omar Rivera Calzadillas."
   "I am a Mexican-American programmer and artist.",
   "I do not speak or write your language, but I wish to learn.",
   "Please visit the English version or the Spanish version of my website.",
@@ -74,6 +100,10 @@ phrases_translations = {
       ".a'o pluka litru le braxamsi.",
   ],
 }
+
+for lang, t in site_title_translations.items():
+    if lang not in phrases_translations:
+        phrases_translations[lang] = [t]
 
 # Maps domain name (TLD) to language name, and optionally a list of ISO 3166
 # country codes.
@@ -210,13 +240,10 @@ languages_with_roots = {
     'ie': 'Gaeilge_(Irish)',
     'pl': 'język_polski',
     # Thank you, Welsh people
-    'cymru': 'Cymraeg_{} X'.format(
-      b'\xf0\x9f\x8f\xb4\xf3\xa0\x81\xa7\xf3\xa0\x81\xa2\xf3\xa0\x81\xb7\xf3\xa0\x81\xac\xf3\xa0\x81\xb3\xf3\xa0\x81\xbf'.decode('utf-8')),
-
+    'cymru': 'Cymraeg gb-wls',
     'ro': 'limba_română',
 
-    'scot': 'Gàidhlig_(Scots_Gaelic)_{} X'.format(
-      b'\xf0\x9f\x8f\xb4\xf3\xa0\x81\xa7\xf3\xa0\x81\xa2\xf3\xa0\x81\xb3\xf3\xa0\x81\xa3\xf3\xa0\x81\xb4\xf3\xa0\x81\xbf'.decode('utf-8')),
+    'scot': 'Gàidhlig_(Scots_Gaelic) gb-sct',
 
     'lu': 'Letzeburgesch',
   },
