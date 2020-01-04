@@ -10,6 +10,7 @@ ipython = "*"
 googletrans = "*"
 emoji-country-flag = "*"
 progressbar2 = "*"
+iso3166 = "*"
 
 [requires]
 python_version = "3.8"

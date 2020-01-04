@@ -1,14 +1,17 @@
 #!/usr/bin/env python
 """Translate and render."""
 
-import cache
+from urllib.parse import quote
+
 import data
-import flag
+from cache import PersistentMemoizationCache
+from flag import flagize
 from googletrans import Translator
+from iso3166 import countries
 from progressbar import ProgressBar
 
 translator = Translator()
-memo = cache.PersistentMemoizationCache(
+memo = PersistentMemoizationCache(
     cache_name='generate_hugo_config_yaml'
 )
 sort = True
@@ -44,8 +47,17 @@ def main():
                 flag_codes = []
 
             flag_emojis = \
-                flag.flagize(' '.join(':{}:'.format(f) for f in flag_codes),
+                flagize(' '.join(':{}:'.format(f) for f in flag_codes),
                              subregions=True)
+
+            custom_flags = "mx us".split()
+            linked_flag_emojis = \
+            ' '.join([
+                "[{}](https://duckduckgo.com/?q={})".format(
+                    flagize(f':{f}:', subregions=True),
+                    quote(countries.get(''.join(f.split('-')[:1])).name)
+                ) for f in flag_codes + custom_flags
+            ])
 
             # Something about the UTF-8 encoding of the Ukrainian flag...
             flag_sep = '"' if any(c in 'ua' for c in code) else "'"
@@ -103,7 +115,7 @@ def main():
     languageName: {flag_sep}{lang_name} {flag_emojis}{flag_sep}
     author: "{data.long_author}"
     title: "{site_title} ({data.short_author})"
-    headerText: "{header_text} --- {data.short_author} {flag_emojis} 🇲🇽 🇺🇸"
+    headerText: "{header_text} --- {data.short_author} {linked_flag_emojis}"
     weight: {lang_weight}
     disableKinds:
       - taxonomy
