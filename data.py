@@ -63,31 +63,77 @@ phrases_translations = {
 # ? or X indicates no need for flag emoji
 
 primary_languages = ["en", "es"]
-secondary_languages = "fr it ch-de de nhn kr jbo".split()
+secondary_languages = "fr it ch-de de kr jbo nhn tar".split()
 
 # TODO generate flags based on wikipedia data
 #       (based on number of people that speak the language)
 languages_with_roots = {
-  # 'en': 'English us',
-  # 'es': 'Espanol mx es',
+  # 'en': 'English ' + \
+  #       'us pr gb nz au ie  ca fj lr sg tt  ' + \
+  #       'hk gu as ai bm vg ky cw fk mp tc vi  ',
+  # 'es': 'Espanol mx pr es sv gt cl ar bo pa py ve gq co pe do',
 
   'constructured languages': {
     # NO DOMAIN NAME
     'eo': 'esperanto X',
+
     # NO DOMAIN NAME
     # TODO
-    # 'lfn': 'Lingua_Franca_Nova_(LFN) X',
+    'lfn': 'Lingua_Franca_Nova_(LFN) X',
+
     # NO DOMAIN NAME
     # TODO
-    # 'jbo': 'Lojban X',
+    'jbo': 'Lojban X',
+
+    # creole
+    'ht': 'kreyòl_ayisyen',
   },
 
   'first nations': {
-    # NO DOMAIN NAME
     'nhn': 'Nahuatl mx',
-    # NO DOMAIN NAME
+    'tar': "Rarámuri_ra'ícha_or_Ralámuli_ra'ícha_(Tarahumara) mx",
+    'nv': 'Diné_bizaad_or_Naabeehó_bizaad_(Navajo) us',
+    'chr': 'ᏣᎳᎩ_ᎦᏬᏂᎯᏍᏗ_Tsalagi_Gawonihisdi_(Cherokee) us',
     'haw': 'ʻŌlelo_Hawaiʻi us',
-    'ht': 'kreyòl_ayisyen',
+
+    # Yucatan
+    # https://en.wikipedia.org/wiki/Yucatec_Maya_language
+    'yua': 'mayaʼ_tʼàan_or_Yukatek_Maya mx',
+
+    # Oaxaca
+    # https://en.wikipedia.org/wiki/Zapotec_languages
+    'zap': 'Zapotec mx',
+    # https://en.wikipedia.org/wiki/Mixe_languages
+    'mixe': 'Mixe mx',
+
+    'vmz': 'Mazatlán_Mazatec mx',
+
+    # language isolate
+    'huv': 'Huave mx',
+
+    # Oaxaca y Puebla
+    # https://en.wikipedia.org/wiki/Tec%C3%B3atl_Mazatec
+    'maa': 'Tecóatl_Mazatec_or_Eloxochitlán_Mazatec mx',
+    'pbm': 'Tecóatl_Mazatec_or_Eloxochitlán_Mazatec mx',
+
+    # https://en.wikipedia.org/wiki/Awakatek_language
+    'agu': "qaʼyol_or_Awakatek_or_Coyotin_or_Chalchitec mx gt",
+
+    # Central altiplano region
+    # https://en.wikipedia.org/wiki/Otomi_language
+    'oto': 'otomitl_or_Hñähñú_or_Ñañhų_(Otomí) mx',
+
+    # Michoacan, Lake Pátzcuaro
+    # language isolate
+    # https://en.wikipedia.org/wiki/Pur%C3%A9pecha_language
+    'tsz': 'Purépecha_or_Tarascan mx',
+    'pua': 'Purépecha_or_Tarascan mx',
+
+    # TX, OK, Coahuila, Sonora
+    # Spoken by the Kickapoo in us and mexico
+    # Some 145 of the tribe members chose to become U.S. citizens and the
+    # remaining 500 or so chose to obtain Mexican citizenship.[7]
+    'kic': 'Fox_or_Mesquakie_Meskwaki mx us',
   },
 
   'europe': {
@@ -146,7 +192,8 @@ languages_with_roots = {
     'il': 'עִבְרִית_(Ivrit)',
     'et': 'አማርኛ_(Amarəñña) et',
     'gr': 'ελληνικά_(elliniká)',
-    'شبكة': 'اَلْعَرَبِيَّةُ_(al-ʿarabiyyah) eg dz sd iq sa ye sy so tn jo ae ly lb ps om',
+    'شبكة': 'اَلْعَرَبِيَّةُ_(al-ʿarabiyyah) ' + \
+            'eg dz sd iq sa ye sy so tn jo ae ly lb ps om',
   },
 
   'asian': {
@@ -182,7 +229,10 @@ languages_with_roots = {
     'hi': 'मानक_हिन्दी_(Mānak_Hindī) in',
 
     'bd': 'বাংলা_(Bengali) bd in',
-    # Indian Dravidian language spoken predominantly by people of Karnataka in southwestern India, and by significant linguistic minorities in the states of Maharashtra, Andhra Pradesh, Tamil Nadu, Telangana, Kerala and abroad
+    # Indian Dravidian language spoken predominantly by people of Karnataka in
+    # southwestern India, and by significant linguistic minorities in the
+    # states of Maharashtra, Andhra Pradesh, Tamil Nadu, Telangana, Kerala
+    # and abroad
     'kn': 'ಕನ್ನಡ_(Kannada) in',
     'ml': 'മലയാളം_(Malayalam) in',
     'ભારત': 'ગુજરાતી_(Gujarati) in',
@@ -197,8 +247,7 @@ languages = {l: v for ls in languages_with_roots.values() for l, v in
              ls.items()}
 
 # To separate sentences
-lang_with_separator = {
-}
+lang_with_separator = {}
 
 no_flag_needed = ['X', '?']
 
@@ -245,5 +294,5 @@ lang_code_to_googletrans_code = {
 
 desired_header_text = '  '.join(phrases)
 
-default_header_text = \
-  '[Please visit my English website](/en), [o visita mi sitio web en español.](/es)'
+default_header_text = '[Please visit my English website](/en), ' + \
+    '[o visita mi sitio web en español.](/es)'
