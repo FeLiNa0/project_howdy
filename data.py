@@ -25,8 +25,18 @@
 
 long_author = "Hugo Omar Rivera Calzadillas"
 short_author = "Hugo O. Rivera"
-site_title = "Hugo says hello"
+site_title = "Hello! Hugo Rivera Calzadillas is my name"
 default_site_title = "Hugo Omar Rivera Calzadillas"
+
+# https://omniglot.com/language/phrases/index.htm
+site_title_translations = {
+    'nhn': 'Nitlze! Nehua notōcā Hugo Rivera',
+    'nv': "Yá'át'ééh! Shí éí Hugo Rivera yinishyé",
+    'haw': "Aloha! ʻO Hugo Rivera koʻu inoa",
+    'lkt': "Hau! Hugo Rivera emáčiyapi",
+    'jbo': "coi! mi'e Hugo Rivera",
+    'lfn': "Ало! Ме ном ес Hugo Rivera"
+}
 
 phrases = [
   "Welcome, dear guest!",
@@ -50,11 +60,18 @@ phrases_translations = {
       'Mi deziras, ke vi trovos multajn interesajn retejojn en via interreta '
       'vojaĝo.'
   ],
+  # https://omniglot.com/language/phrases/lfn.php
   'lfn': [
-      'TODO'
+      'Bonveni!',
+      'Tu parla engles? Un lingua no sufisi.',
+      'Joia! Sania!',
+      'Bon viaje!',
   ],
+  # https://omniglot.com/language/phrases/lojban.htm
   'jbo': [
-      'TODO'
+      "fi'i",
+      "xu do se bangu la .inglic.",
+      ".a'o pluka litru le braxamsi.",
   ],
 }
 
@@ -103,6 +120,10 @@ languages_with_roots = {
     # Alaska
     # https://en.wikipedia.org/wiki/Yupik_languages
     'ypk': 'Yupik us',
+
+    # US and Canada, the Dakotas, Nebraska, Missouri, Montana
+    # https://en.wikipedia.org/wiki/Lakota_language
+    'lkt': "Lakȟótiyapi_(Lakota) us ca",
 
     # https://en.wikipedia.org/wiki/Southern_Athabaskan_languages
     'apa': 'Southern_Athabaskan_or_Apachean us mx',
