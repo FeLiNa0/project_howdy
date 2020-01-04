@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 """Translate and render."""
 
-import cache
-import data
 import flag
 import progressbar
 from googletrans import Translator
+
+import cache
+import data
 
 
 def main():
@@ -74,6 +75,7 @@ def main():
                         .replace('-American', 'Mexicanus-American')
             except ValueError as e:
                 print(f'failed to translate language={lang_code}', e, file=f)
+                lang_weight = 3 if lang_code in data.secondary_languages else 9
 
             print(f"""  '{lang_code}':
     languageName: {flag_sep}{lang_name} {flag_emojis}{flag_sep}
