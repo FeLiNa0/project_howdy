@@ -92,9 +92,43 @@ languages_with_roots = {
   'first nations': {
     'nhn': 'Nahuatl mx',
     'tar': "Rarámuri_ra'ícha_or_Ralámuli_ra'ícha_(Tarahumara) mx",
+
     'nv': 'Diné_bizaad_or_Naabeehó_bizaad_(Navajo) us',
     'chr': 'ᏣᎳᎩ_ᎦᏬᏂᎯᏍᏗ_Tsalagi_Gawonihisdi_(Cherokee) us',
     'haw': 'ʻŌlelo_Hawaiʻi us',
+
+    # https://en.wikipedia.org/wiki/Dakota_language
+    'dak': 'Dakhótiyapi_Dakȟótiyapi_(Dakota) us',
+
+    # Alaska
+    # https://en.wikipedia.org/wiki/Yupik_languages
+    'ypk': 'Yupik us',
+
+    # https://en.wikipedia.org/wiki/Southern_Athabaskan_languages
+    'apa': 'Southern_Athabaskan_or_Apachean us mx',
+
+    # New Mexico
+    # language isolate
+    # https://en.wikipedia.org/wiki/Keres_language
+    'kee': 'Eastern_Keresan us',
+    'kjq': 'Western_Keresan us',
+
+    # Oklahoma
+    # https://en.wikipedia.org/wiki/Choctaw_language
+    'cho': 'Choctaw us',
+
+    # NM and AZ
+    # language isolate, possibly 7000 years old
+    # https://en.wikipedia.org/wiki/Zuni_language
+    'zun': "Shiwiʼma_or_Zuni us",
+
+    # AZ
+    # https://en.wikipedia.org/wiki/Hopi_language
+    'hop': 'Hopílavayi_(Hopi) us',
+
+    # Pueblo people in Rio Grande valley in NM, also in AZ
+    # https://en.wikipedia.org/wiki/Tewa_language
+    'tew': 'Tano_or_Tewa us',
 
     # Yucatan
     # https://en.wikipedia.org/wiki/Yucatec_Maya_language
