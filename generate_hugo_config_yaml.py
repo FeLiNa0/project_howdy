@@ -63,14 +63,8 @@ def main():
                         memo.call(translator.translate,
                                   phrase, src='en', dest=dest_lang).text
                         for phrase in data.phrases)
+                    header_text = f"[{header_text}](/)"
 
-                if lang_code in data.site_title_translations:
-                    site_title = data.site_title_translations[lang_code]
-                else:
-                    site_title = memo.call(translator.translate,
-                                           data.site_title,
-                                           src='en', dest=dest_lang).text
-                header_text = f"[{header_text}](/)"
                 if lang_code in ['it', 'corsica']:
                     header_text = header_text.replace('americana', 'americano')
                 if lang_code == 'zulu':
@@ -80,6 +74,17 @@ def main():
                         .replace('-American', 'Mexicanus-American')
             except ValueError as e:
                 print(f'failed to translate language={lang_code}', e, file=f)
+                lang_weight = 3 if lang_code in data.secondary_languages else 9
+
+            try:
+                if lang_code in data.site_title_translations:
+                    site_title = data.site_title_translations[lang_code]
+                else:
+                    site_title = memo.call(translator.translate,
+                                           data.site_title,
+                                           src='en', dest=dest_lang).text
+            except ValueError as e:
+                print(f'failed to translate title for {lang_code}', e, file=f)
                 lang_weight = 3 if lang_code in data.secondary_languages else 9
 
             print(f"""  '{lang_code}':
