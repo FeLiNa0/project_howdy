@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 """Translate and render."""
 
+import random
 from urllib.parse import quote
 
 import data
@@ -45,14 +46,16 @@ def main():
                 flag_codes = []
 
             flag_emojis = \
-                flagize(' '.join(':{}:'.format(f) for f in flag_codes),
-                             subregions=True)
+                flagize(' '.join(
+                    '<span>:{}:</span>'.format(f) for f in flag_codes),
+                        subregions=True)
 
             custom_flags = "mx us".split()
             named = [
                 (code, countries.get(''.join(code.split('-')[:1])).name)
                 for code in flag_codes + custom_flags
             ]
+            random.shuffle(named)
             linked_flag_emojis = \
             ' '.join([
                 "[{}](https://duckduckgo.com/?q={} '{}')".format(
