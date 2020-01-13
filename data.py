@@ -385,6 +385,9 @@ languages_with_roots = OrderedDict([
     # remaining 500 or so chose to obtain Mexican citizenship.[7]
     'kic': 'Fox_or_Mesquakie_Meskwaki mx us',
   }),
+  ('...', {
+    'aboriginal': "<img src='https://upload.wikimedia.org/wikipedia/en/3/3f/Australian_Aboriginal_Flag.svg'",
+  }),
 ])
 
 languages = {l: v for ls in languages_with_roots.values() for l, v in
